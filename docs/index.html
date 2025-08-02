@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCGStarCraft プレイヤーマニュアル</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>🚀 MCGStarCraft</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#getting-started">はじめに</a></li>
+                <li><a href="#items">アイテム</a></li>
+                <li><a href="#machines">機械</a></li>
+                <li><a href="#rockets">ロケット</a></li>
+                <li><a href="#planets">惑星探索</a></li>
+                <li><a href="admin.html">管理者ガイド</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ヒーローセクション -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>MCGStarCraft<br>プレイヤーマニュアル</h1>
+                <p>宇宙を探索し、新たな世界を発見しよう</p>
+                <a href="#getting-started" class="btn-primary">探索を始める</a>
+            </div>
+        </section>
+
+        <!-- はじめに -->
+        <section id="getting-started" class="section">
+            <div class="container">
+                <h2>🎮 はじめに</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>1. 準備</h3>
+                        <ul>
+                            <li>鉄鉱石と金鉱石を採掘</li>
+                            <li>タイタナイトとコンジットを収集</li>
+                            <li>パッケージャーを建築</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>2. 装備作成</h3>
+                        <img src="images/spacesuit_full.png" alt="宇宙服フルセット" class="card-image">
+                        <ul>
+                            <li>宇宙服4部位を作成</li>
+                            <li>空気キャニスターを準備</li>
+                            <li>燃料を精製</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>3. 宇宙へ</h3>
+                        <img src="images/rocket_example.png" alt="ロケット例" class="card-image">
+                        <ul>
+                            <li>ロケットを建造</li>
+                            <li>発射台を設置</li>
+                            <li>目的地を選択して発射！</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 基本資源 -->
+        <section id="items" class="section bg-light">
+            <div class="container">
+                <h2>📦 基本資源とアイテム</h2>
+                
+                <h3>採掘で入手する資源</h3>
+                <img src="images/resources_titanite.png" alt="資源アイテム" class="section-image">
+                <div class="resource-grid">
+                    <div class="resource-item">
+                        <div class="resource-icon">⛏️</div>
+                        <h4>タイタナイト</h4>
+                        <p>鉄鉱石から8%の確率</p>
+                        <p class="resource-world">入手可能: world、organic</p>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-icon">💎</div>
+                        <h4>コンジット</h4>
+                        <p>金鉱石から8%の確率</p>
+                        <p class="resource-world">入手可能: world、radiated</p>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-icon">🧪</div>
+                        <h4>シリコン</h4>
+                        <p>ブレインコーラルから16%</p>
+                        <p class="resource-world">入手可能: aquatic、world</p>
+                    </div>
+                </div>
+
+                <h3>重要アイテムの作成</h3>
+                <p style="text-align: center; margin: var(--spacing-md) 0;">
+                    パッケージャーと各種機械を使って、採掘した資源から宇宙探索に必要なアイテムを作成します
+                </p>
+                <div class="crafting-flow">
+                    <div class="craft-step">
+                        <img src="images/titanium_plates.png" alt="チタンプレート" class="craft-image">
+                        <h4>チタンプレート</h4>
+                        <p>タイタナイト×6 + マグマクリーム×3</p>
+                        <p class="craft-location">作成場所: パッケージャー</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="craft-step">
+                        <img src="images/air_canister_empty.png" alt="空気キャニスター" class="craft-image">
+                        <h4>空気キャニスター</h4>
+                        <p>コンジット×2 + チタンプレート×6</p>
+                        <p class="craft-location">作成場所: パッケージャー</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="craft-step">
+                        <img src="images/air_canister_full.png" alt="充填済みキャニスター" class="craft-image">
+                        <h4>充填済みキャニスター</h4>
+                        <p>空気圧縮機で充填</p>
+                        <p class="craft-location">作成場所: 空気圧縮機</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 機械 -->
+        <section id="machines" class="section">
+            <div class="container">
+                <h2>🏭 機械の建築と使用</h2>
+                <div class="machine-grid">
+                    <div class="machine-card">
+                        <img src="images/packager_interface.png" alt="パッケージャー操作画面" class="machine-image">
+                        <h3>パッケージャー</h3>
+                        <div class="machine-info">
+                            <p><strong>用途:</strong> ほぼすべてのアイテム作成</p>
+                            <p><strong>構造:</strong> 9層 + 看板層</p>
+                            <p><strong>必須:</strong> 白樺の看板</p>
+                        </div>
+                        <div class="machine-usage">
+                            <h4>使い方:</h4>
+                            <ol>
+                                <li>看板をクリック</li>
+                                <li>レシピを選択</li>
+                                <li>材料をバレルに入れる</li>
+                                <li>看板を再度クリック</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="machine-card">
+                        <img src="images/compressor_interface.png" alt="空気圧縮機操作画面" class="machine-image">
+                        <h3>空気圧縮機</h3>
+                        <div class="machine-info">
+                            <p><strong>用途:</strong> 空気キャニスターの充填</p>
+                            <p><strong>構造:</strong> 4層構造</p>
+                            <p><strong>必須:</strong> 白樺の看板</p>
+                        </div>
+                        <div class="machine-usage">
+                            <h4>使い方:</h4>
+                            <ol>
+                                <li>空のキャニスターをチェストに入れる</li>
+                                <li>1スロット1個ずつ配置</li>
+                                <li>看板をクリック</li>
+                                <li>「Compressing...」を確認</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="machine-card">
+                        <img src="images/refinery_interface.png" alt="精製機操作画面" class="machine-image">
+                        <h3>精製機</h3>
+                        <div class="machine-info">
+                            <p><strong>用途:</strong> 燃料キャニスター作成</p>
+                            <p><strong>構造:</strong> 9層構造</p>
+                            <p><strong>材料:</strong> コーラスフルーツ</p>
+                        </div>
+                        <div class="machine-usage">
+                            <h4>使い方:</h4>
+                            <ol>
+                                <li>コーラスフルーツをチェストに入れる</li>
+                                <li>看板をクリック</li>
+                                <li>精製完了を待つ</li>
+                                <li>燃料キャニスターを取り出す</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 宇宙服 -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2>👨‍🚀 宇宙服とアップグレード</h2>
+                
+                <h3>宇宙服の作成</h3>
+                <div class="spacesuit-grid">
+                    <div class="suit-part">
+                        <h4>🪖 ヘルメット</h4>
+                        <p>チタンプレート×5<br>スライムボール×1<br>ガラス×3</p>
+                        <p class="feature">機能: 空気タンク</p>
+                    </div>
+                    <div class="suit-part">
+                        <h4>🦺 ベスト</h4>
+                        <p>チタンプレート×7<br>スライムボール×2</p>
+                        <p class="feature">機能: 放射線防護</p>
+                    </div>
+                    <div class="suit-part">
+                        <h4>👖 パンツ</h4>
+                        <p>チタンプレート×7<br>スライムボール×2</p>
+                        <p class="feature">機能: 熱防護</p>
+                    </div>
+                    <div class="suit-part">
+                        <h4>👢 ブーツ</h4>
+                        <p>チタンプレート×4<br>マグマクリーム×3<br>スライムボール×2</p>
+                        <p class="feature">機能: ジェットパック</p>
+                    </div>
+                </div>
+
+                <h3>アップグレードシステム</h3>
+                <div class="upgrade-info">
+                    <div class="upgrade-process">
+                        <h4>アップグレード方法</h4>
+                        <ol>
+                            <li>宇宙服を装備する</li>
+                            <li>アップグレードキットを持つ</li>
+                            <li>金床をShift+左クリック</li>
+                            <li>Tier 1→2→3→4の順番で強化</li>
+                        </ol>
+                    </div>
+                    <div class="upgrade-types">
+                        <h4>アップグレード種類</h4>
+                        <ul>
+                            <li>🌬️ 空気タンク (Tier 1-4)</li>
+                            <li>⛽ 燃料タンク (Tier 1-4)</li>
+                            <li>☢️ 放射線防護 (Tier 1-4)</li>
+                            <li>🌡️ 温度耐性 (Tier 1-4)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ロケット -->
+        <section id="rockets" class="section">
+            <div class="container">
+                <h2>🚀 ロケットと発射</h2>
+                
+                <div class="rocket-guide">
+                    <div class="rocket-build">
+                        <h3>ロケット建造</h3>
+                        <div class="build-requirements">
+                            <h4>建造ルール</h4>
+                            <ul>
+                                <li>最大高さ: 15ブロック</li>
+                                <li>発射台の範囲内</li>
+                                <li>チェスト必須（燃料用）</li>
+                                <li>オークの看板必須</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="launch-process">
+                        <h3>発射手順</h3>
+                        <ol class="launch-steps">
+                            <li>
+                                <h4>発射台建設</h4>
+                                <img src="images/launchpad_complete.png" alt="発射台" class="step-image">
+                                <p>11×11の鉄・金・ラピスブロック</p>
+                            </li>
+                            <li>
+                                <h4>ロケット建造</h4>
+                                <p>発射台の上に15ブロック以内</p>
+                            </li>
+                            <li>
+                                <h4>看板設置</h4>
+                                <img src="images/rocket_sign_setup.png" alt="看板設置" class="step-image">
+                                <p>[rocket]<br>x座標,y座標,z座標</p>
+                            </li>
+                            <li>
+                                <h4>燃料投入</h4>
+                                <p>チェストに燃料キャニスター</p>
+                            </li>
+                            <li>
+                                <h4>発射！</h4>
+                                <img src="images/launch_menu.png" alt="発射メニュー" class="step-image">
+                                <p>看板をクリックして目的地選択</p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 惑星探索 -->
+        <section id="planets" class="section bg-light">
+            <div class="container">
+                <h2>🌍 惑星探索ガイド</h2>
+                
+                <div class="planet-grid">
+                    <div class="planet-card safe">
+                        <h3>🌿 有機惑星</h3>
+                        <div class="planet-stats">
+                            <p>📊 危険度: ★☆☆☆☆</p>
+                            <p>🌬️ 酸素: あり</p>
+                            <p>☢️ 放射線: Lv.1</p>
+                            <p>🌡️ 温度: Lv.2</p>
+                        </div>
+                        <div class="planet-tips">
+                            <h4>必要装備:</h4>
+                            <ul>
+                                <li>宇宙服不要</li>
+                                <li>温度耐性 Tier 2推奨</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="planet-card moderate">
+                        <h3>🌊 水中惑星</h3>
+                        <div class="planet-stats">
+                            <p>📊 危険度: ★★☆☆☆</p>
+                            <p>🌬️ 酸素: あり（陸上）</p>
+                            <p>☢️ 放射線: なし</p>
+                            <p>🌡️ 温度: Lv.1</p>
+                        </div>
+                        <div class="planet-tips">
+                            <h4>必要装備:</h4>
+                            <ul>
+                                <li>水中呼吸ポーション</li>
+                                <li>温度耐性 Tier 1</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="planet-card dangerous">
+                        <h3>🪨 岩石惑星</h3>
+                        <div class="planet-stats">
+                            <p>📊 危険度: ★★★★☆</p>
+                            <p>🌬️ 酸素: なし</p>
+                            <p>☢️ 放射線: Lv.3</p>
+                            <p>☄️ 隕石: あり</p>
+                        </div>
+                        <div class="planet-tips">
+                            <h4>必要装備:</h4>
+                            <ul>
+                                <li>宇宙服フルセット</li>
+                                <li>放射線防護 Tier 3+</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="planet-card extreme">
+                        <h3>☢️ 放射線惑星</h3>
+                        <div class="planet-stats">
+                            <p>📊 危険度: ★★★★★</p>
+                            <p>🌬️ 酸素: なし</p>
+                            <p>☢️ 放射線: Lv.4</p>
+                            <p>🌡️ 温度: Lv.4</p>
+                        </div>
+                        <div class="planet-tips">
+                            <h4>必要装備:</h4>
+                            <ul>
+                                <li>宇宙服フルセット</li>
+                                <li>全Tier 4アップグレード</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="survival-tips">
+                    <h3>⚠️ サバイバルのコツ</h3>
+                    <img src="images/recipe_book_gui.png" alt="レシピブック" class="section-image">
+                    <div class="tips-grid">
+                        <div class="tip">
+                            <h4>酸素管理</h4>
+                            <p>予備キャニスターを3個以上携帯。常に酸素ゲージを監視。</p>
+                        </div>
+                        <div class="tip">
+                            <h4>隕石対策</h4>
+                            <p>地下10ブロック以上に避難。石の天井3層で防御。</p>
+                        </div>
+                        <div class="tip">
+                            <h4>放射線対策</h4>
+                            <p>適切なTierの防護装備必須。短時間探索を心がける。</p>
+                        </div>
+                        <div class="tip">
+                            <h4>緊急脱出</h4>
+                            <p>ロケット位置を常に把握。座標をメモして迷子防止。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- フッター -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 MCGStarCraft Player Manual</p>
+                <p>MCGStarCraft Plugin by MCGSoft</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

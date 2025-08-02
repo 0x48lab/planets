@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCGStarCraft 管理者ガイド</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-warning {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: var(--spacing-lg);
+            border-radius: 8px;
+            margin: var(--spacing-lg) 0;
+            text-align: center;
+        }
+        
+        .command-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .command-table th,
+        .command-table td {
+            padding: var(--spacing-sm);
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+        
+        .command-table th {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .command-table tr:nth-child(even) {
+            background: var(--light-bg);
+        }
+        
+        .command-table code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9rem;
+        }
+        
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .back-button:hover {
+            background: #3a7bc8;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>🔒 MCGStarCraft 管理者</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">プレイヤーガイドへ戻る</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="margin-top: 60px;">
+        <!-- ヘッダー -->
+        <section class="section">
+            <div class="container">
+                <a href="index.html" class="back-button">← プレイヤーガイドへ戻る</a>
+                
+                <h1 style="text-align: center; font-size: 2.5rem; margin-bottom: var(--spacing-lg);">
+                    管理者コマンドリファレンス
+                </h1>
+                
+                <div class="admin-warning">
+                    <h2>⚠️ 管理者専用ページ</h2>
+                    <p>このページの内容は管理者権限を持つユーザーのみ使用可能です</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- アイテム取得コマンド -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2>📦 アイテム取得コマンド</h2>
+                <p style="text-align: center; margin-bottom: var(--spacing-lg);">
+                    /spaceadmin give [itemname] で各種アイテムを取得
+                </p>
+
+                <h3>基本資源</h3>
+                <table class="command-table">
+                    <thead>
+                        <tr>
+                            <th>アイテム名</th>
+                            <th>コマンド</th>
+                            <th>説明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>タイタナイト鉱石</td>
+                            <td><code>/spaceadmin give titaniteore</code></td>
+                            <td>チタンプレートの原料</td>
+                        </tr>
+                        <tr>
+                            <td>コンジットクリスタル</td>
+                            <td><code>/spaceadmin give conduitore</code></td>
+                            <td>空気キャニスターの材料</td>
+                        </tr>
+                        <tr>
+                            <td>シリコンセル</td>
+                            <td><code>/spaceadmin give silicon</code></td>
+                            <td>アップグレードキットの材料</td>
+                        </tr>
+                        <tr>
+                            <td>熱接着剤</td>
+                            <td><code>/spaceadmin give thermoglue</code></td>
+                            <td>マグマクリームを精錬したもの</td>
+                        </tr>
+                        <tr>
+                            <td>チタンプレート</td>
+                            <td><code>/spaceadmin give titaniteplate</code></td>
+                            <td>宇宙服の主要材料</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>キャニスター類</h3>
+                <table class="command-table">
+                    <thead>
+                        <tr>
+                            <th>アイテム名</th>
+                            <th>コマンド</th>
+                            <th>説明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>空の空気キャニスター</td>
+                            <td><code>/spaceadmin give airtankempty</code></td>
+                            <td>酸素充填前の容器</td>
+                        </tr>
+                        <tr>
+                            <td>充填済み空気キャニスター</td>
+                            <td><code>/spaceadmin give airtankfull</code></td>
+                            <td>酸素が入った状態</td>
+                        </tr>
+                        <tr>
+                            <td>汚染空気キャニスター</td>
+                            <td><code>/spaceadmin give airtankpoluted</code></td>
+                            <td>汚染された空気</td>
+                        </tr>
+                        <tr>
+                            <td>炭素空気キャニスター</td>
+                            <td><code>/spaceadmin give airtankcarbon</code></td>
+                            <td>二酸化炭素入り</td>
+                        </tr>
+                        <tr>
+                            <td>充填済み燃料キャニスター</td>
+                            <td><code>/spaceadmin give fueltankfull</code></td>
+                            <td>ロケット/ジェットパック用</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>アップグレードキット</h3>
+                <div class="cards">
+                    <div class="card">
+                        <h4>🌬️ 空気タンク</h4>
+                        <pre><code>/spaceadmin give airupgrade1
+/spaceadmin give airupgrade2
+/spaceadmin give airupgrade3
+/spaceadmin give airupgrade4</code></pre>
+                        <p>酸素容量を増加</p>
+                    </div>
+                    <div class="card">
+                        <h4>⛽ 燃料タンク</h4>
+                        <pre><code>/spaceadmin give fuelupgrade1
+/spaceadmin give fuelupgrade2
+/spaceadmin give fuelupgrade3
+/spaceadmin give fuelupgrade4</code></pre>
+                        <p>Tier 1でジェットパック解禁</p>
+                    </div>
+                    <div class="card">
+                        <h4>☢️ 放射線防護</h4>
+                        <pre><code>/spaceadmin give radiationupgrade1
+/spaceadmin give radiationupgrade2
+/spaceadmin give radiationupgrade3
+/spaceadmin give radiationupgrade4</code></pre>
+                        <p>放射線耐性を向上</p>
+                    </div>
+                    <div class="card">
+                        <h4>🌡️ 温度耐性</h4>
+                        <pre><code>/spaceadmin give temperatureupgrade1
+/spaceadmin give temperatureupgrade2
+/spaceadmin give temperatureupgrade3
+/spaceadmin give temperatureupgrade4</code></pre>
+                        <p>極限温度への耐性</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- システムコマンド -->
+        <section class="section">
+            <div class="container">
+                <h2>⚙️ システム管理コマンド</h2>
+                
+                <table class="command-table">
+                    <thead>
+                        <tr>
+                            <th>コマンド</th>
+                            <th>構文</th>
+                            <th>説明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>テレポート</td>
+                            <td><code>/spaceadmin tp [worldtype]</code></td>
+                            <td>指定した惑星タイプへテレポート<br>
+                                worldtype: space / rocky / organic / radiated / aquatic / world</td>
+                        </tr>
+                        <tr>
+                            <td>空気量設定</td>
+                            <td><code>/spaceadmin setair [amount] [player]</code></td>
+                            <td>プレイヤーの空気量を設定（0-100）</td>
+                        </tr>
+                        <tr>
+                            <td>ダンジョン生成</td>
+                            <td><code>/spaceadmin makedungeon</code></td>
+                            <td>現在位置にダンジョンを生成</td>
+                        </tr>
+                        <tr>
+                            <td>管理者GUI</td>
+                            <td><code>/spaceadmin gui</code></td>
+                            <td>管理者用GUIメニューを開く</td>
+                        </tr>
+                        <tr>
+                            <td>構造物生成</td>
+                            <td><code>/spaceadmin generatestructure [name]</code></td>
+                            <td>指定した構造物を生成</td>
+                        </tr>
+                        <tr>
+                            <td>ダンジョンタイル作成</td>
+                            <td><code>/spaceadmin createdungeontile [north] [east] [south] [west]</code></td>
+                            <td>ダンジョンタイルを作成（各方向の開口を指定）</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- プレイヤー向けコマンド -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2>👥 プレイヤー向けコマンド（権限設定）</h2>
+                <p style="text-align: center; margin-bottom: var(--spacing-lg);">
+                    これらのコマンドはプレイヤーも使用可能ですが、権限設定が必要です
+                </p>
+                
+                <table class="command-table">
+                    <thead>
+                        <tr>
+                            <th>コマンド</th>
+                            <th>構文</th>
+                            <th>必要権限</th>
+                            <th>説明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>レシピブック取得</td>
+                            <td><code>/space getrecipebook</code></td>
+                            <td>なし（設定で有効化必要）</td>
+                            <td>レシピブックを入手</td>
+                        </tr>
+                        <tr>
+                            <td>テレポート</td>
+                            <td><code>/space tp [worldtype]</code></td>
+                            <td>world.[worldtype]</td>
+                            <td>指定惑星へテレポート</td>
+                        </tr>
+                        <tr>
+                            <td>ストーリーログ</td>
+                            <td><code>/space getlog 1/2/3 [logid]</code></td>
+                            <td>なし</td>
+                            <td>ストーリーログを取得</td>
+                        </tr>
+                        <tr>
+                            <td>アイテム取得</td>
+                            <td><code>/space give [itemname]</code></td>
+                            <td>要管理者権限</td>
+                            <td>config.ymlで有効化が必要</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- POI管理 -->
+        <section class="section">
+            <div class="container">
+                <h2>📍 POI（Points of Interest）管理</h2>
+                
+                <div class="cards">
+                    <div class="card">
+                        <h3>POI作成</h3>
+                        <pre><code>/space poi create [name]</code></pre>
+                        <p>現在位置にPOIを作成し、設定ファイルを生成</p>
+                    </div>
+                    <div class="card">
+                        <h3>ルートテーブル作成</h3>
+                        <pre><code>/space poi loottable create</code></pre>
+                        <p>見ているチェストの内容をルートテーブルとして保存</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 設定ファイル参照 -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2>📝 重要な設定ファイル</h2>
+                
+                <div class="cards">
+                    <div class="card">
+                        <h3>config.yml</h3>
+                        <ul>
+                            <li>debugoutput - デバッグ出力</li>
+                            <li>airsystem - 酸素システム有効化</li>
+                            <li>fuelsystem - 燃料システム有効化</li>
+                            <li>spacerealism - 重力効果</li>
+                            <li>temperaturemodule - 温度システム</li>
+                            <li>radiationmodule - 放射線システム</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>worldsettings.yml</h3>
+                        <ul>
+                            <li>各惑星の環境設定</li>
+                            <li>放射線レベル（0-4）</li>
+                            <li>温度レベル（0-4）</li>
+                            <li>低重力設定</li>
+                            <li>隕石の有無</li>
+                            <li>ダンジョン生成設定</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>galaxysettings.yml</h3>
+                        <ul>
+                            <li>銀河系の設定</li>
+                            <li>惑星間の移動コスト</li>
+                            <li>ワープドライブ設定</li>
+                            <li>マルチサーバー対応</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- トラブルシューティング -->
+        <section class="section">
+            <div class="container">
+                <h2>🔧 管理者向けトラブルシューティング</h2>
+                
+                <div class="tips-grid">
+                    <div class="tip">
+                        <h4>宇宙服が直接giveできない</h4>
+                        <p>宇宙服（helm、vest、pants、boots）はプラグイン専用のNBTタグが必要なため、
+                        パッケージャーでの作成が必須です。材料をgiveして作成してください。</p>
+                    </div>
+                    <div class="tip">
+                        <h4>機械が動作しない</h4>
+                        <p>白樺の看板が使用されているか確認。
+                        buildings/*.datファイルが正しく配置されているか確認してください。</p>
+                    </div>
+                    <div class="tip">
+                        <h4>惑星が生成されない</h4>
+                        <p>worldsettings.ymlの設定を確認。
+                        generator typeが正しく設定されているか、権限設定を確認してください。</p>
+                    </div>
+                    <div class="tip">
+                        <h4>災害システムの調整</h4>
+                        <p>config.yml内のdisastersセクションで確率を調整。
+                        0に設定すると無効化できます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 注意事項 -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2>⚠️ 重要な注意事項</h2>
+                
+                <div class="admin-warning">
+                    <h3>バックアップを推奨</h3>
+                    <p>設定変更前は必ずワールドデータとプラグイン設定のバックアップを取ってください</p>
+                </div>
+                
+                <ul style="max-width: 800px; margin: var(--spacing-lg) auto; font-size: 1.1rem; line-height: 1.8;">
+                    <li>🔸 プレイヤー用の <code>/space give</code> コマンドは config.yml で有効化が必要</li>
+                    <li>🔸 宇宙服パーツは直接giveできないため、材料を与えて作成させる</li>
+                    <li>🔸 惑星生成の変更は新規チャンクにのみ適用される</li>
+                    <li>🔸 災害システムの確率変更はサーバー再起動が必要</li>
+                    <li>🔸 マルチサーバー構成の場合は multiserver.enabled を true に設定</li>
+                    <li>🔸 デバッグモードは本番環境では無効化を推奨</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- フッター -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 MCGStarCraft Admin Guide</p>
+                <p>MCGStarCraft Plugin by MCGSoft</p>
+                <p><a href="index.html" style="color: white;">プレイヤーガイドへ戻る</a></p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

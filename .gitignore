@@ -1,0 +1,11 @@
+# すべてを無視
+/*
+
+# docsフォルダのみ追跡
+!/docs/
+!/docs/**
+
+# CLAUDE.mdとドキュメント関連ファイルも追跡
+!/CLAUDE.md
+!/.gitignore
+!/README.md
