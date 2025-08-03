@@ -122,6 +122,56 @@ main {
     background-color: var(--light-bg);
 }
 
+.bg-dark {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.bg-dark h2, .bg-dark h3 {
+    color: #ffffff;
+}
+
+.resource-pack-info {
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+}
+
+.download-section {
+    margin: var(--spacing-lg) 0;
+}
+
+.server-config-info {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.code-block {
+    background-color: #000;
+    padding: var(--spacing-md);
+    border-radius: 4px;
+    margin: var(--spacing-sm) 0;
+    overflow-x: auto;
+}
+
+.code-block code {
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.config-note {
+    font-size: 14px;
+    color: #b0b0b0;
+    margin-top: var(--spacing-sm);
+}
+
 h2 {
     font-size: 2rem;
     margin-bottom: var(--spacing-lg);
