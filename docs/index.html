@@ -70,10 +70,10 @@
                 <h2>🎮 はじめに</h2>
                 <div class="cards">
                     <div class="card">
-                        <h3>1. 準備</h3>
+                        <h3>1. 資源収集</h3>
                         <ul>
-                            <li>鉄鉱石と金鉱石を採掘</li>
-                            <li>タイタナイトとコンジットを収集</li>
+                            <li>鉄鉱石からタイタナイト（8%）</li>
+                            <li>金鉱石からコンジット（8%）</li>
                             <li>パッケージャーを建築</li>
                         </ul>
                     </div>
@@ -82,17 +82,17 @@
                         <img src="images/spacesuit_full.png" alt="宇宙服フルセット" class="card-image">
                         <ul>
                             <li>宇宙服4部位を作成</li>
-                            <li>空気キャニスターを準備</li>
-                            <li>燃料を精製</li>
+                            <li>空気キャニスターを充填</li>
+                            <li>コーラスフルーツから燃料精製</li>
                         </ul>
                     </div>
                     <div class="card">
-                        <h3>3. 宇宙へ</h3>
+                        <h3>3. 火星へ出発！</h3>
                         <img src="images/rocket_example.png" alt="ロケット例" class="card-image">
                         <ul>
-                            <li>ロケットを建造</li>
-                            <li>発射台を設置</li>
-                            <li>目的地を選択して発射！</li>
+                            <li>ロケットを建造（最大15ブロック）</li>
+                            <li>燃料を3個以上チェストに</li>
+                            <li class="highlight-new">初心者は火星から！</li>
                         </ul>
                     </div>
                 </div>
@@ -105,28 +105,45 @@
                 <h2>📦 基本資源とアイテム</h2>
                 
                 <h3>採掘で入手する資源</h3>
-                <img src="images/resources_titanite.png" alt="資源アイテム" class="section-image">
                 <div class="resource-grid">
                     <div class="resource-item">
-                        <div class="resource-icon">⛏️</div>
+                        <img src="images/titanite_ore.png" alt="タイタナイト" class="resource-image">
                         <h4>タイタナイト</h4>
                         <p>鉄鉱石から8%の確率</p>
                         <p class="resource-world">入手可能: world、organic</p>
                     </div>
                     <div class="resource-item">
-                        <div class="resource-icon">💎</div>
+                        <img src="images/conduit_crystals.png" alt="コンジット" class="resource-image">
                         <h4>コンジット</h4>
                         <p>金鉱石から8%の確率</p>
                         <p class="resource-world">入手可能: world、radiated</p>
                     </div>
                     <div class="resource-item">
-                        <div class="resource-icon">🧪</div>
+                        <img src="images/silicon_cell.png" alt="シリコン" class="resource-image">
                         <h4>シリコン</h4>
                         <p>ブレインコーラルから16%</p>
                         <p class="resource-world">入手可能: aquatic、world</p>
                     </div>
+                    <div class="resource-item">
+                        <img src="images/thermoglue.png" alt="熱接着剤" class="resource-image">
+                        <h4>熱接着剤（Thermoglue）</h4>
+                        <p>マグマクリームの代替品</p>
+                        <p class="resource-world">チタンプレート作成に必要</p>
+                    </div>
                 </div>
 
+                <h3>パッケージャーとは</h3>
+                <div class="packager-info">
+                    <p><strong>パッケージャーは、MCGStarCraftで最も重要な機械です。</strong></p>
+                    <p>ほぼすべてのカスタムアイテムの作成に使用します：</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>✅ 宇宙服の全パーツ（ヘルメット、ベスト、パンツ、ブーツ）</li>
+                        <li>✅ チタンプレート（基本素材）</li>
+                        <li>✅ 空気キャニスター</li>
+                        <li>✅ すべてのアップグレードキット（Tier 1～4）</li>
+                    </ul>
+                </div>
+                
                 <h3>重要アイテムの作成</h3>
                 <p style="text-align: center; margin: var(--spacing-md) 0;">
                     パッケージャーと各種機械を使って、採掘した資源から宇宙探索に必要なアイテムを作成します
@@ -161,61 +178,202 @@
             <div class="container">
                 <h2>🏭 機械の建築と使用</h2>
                 <div class="machine-grid">
-                    <div class="machine-card">
+                    <div class="machine-card featured">
+                        <div class="important-badge">最重要</div>
                         <img src="images/packager_interface.png" alt="パッケージャー操作画面" class="machine-image">
                         <h3>パッケージャー</h3>
                         <div class="machine-info">
                             <p><strong>用途:</strong> ほぼすべてのアイテム作成</p>
                             <p><strong>構造:</strong> 9層 + 看板層</p>
-                            <p><strong>必須:</strong> 白樺の看板</p>
+                            <p><strong>必須:</strong> 白樺の看板<br>1行目: [space]<br>2行目: packager</p>
+                        </div>
+                        <div class="machine-recipes">
+                            <h4>作成可能アイテム:</h4>
+                            <ul style="font-size: 0.9em;">
+                                <li>宇宙服全パーツ</li>
+                                <li>チタンプレート（タイタナイト×6 + マグマクリーム×3）</li>
+                                <li>空気キャニスター（コンジット×2 + チタンプレート×6）</li>
+                                <li>各種アップグレードキット</li>
+                            </ul>
                         </div>
                         <div class="machine-usage">
                             <h4>使い方:</h4>
                             <ol>
-                                <li>看板をクリック</li>
-                                <li>レシピを選択</li>
-                                <li>材料をバレルに入れる</li>
-                                <li>看板を再度クリック</li>
+                                <li>構造を建築して看板を設置</li>
+                                <li>看板をクリックしてGUIを開く</li>
+                                <li>作りたいアイテムのレシピを選択</li>
+                                <li>必要な材料をバレル（樽）に入れる</li>
+                                <li>看板を再度クリックで作成開始</li>
                             </ol>
+                        </div>
+                        <div class="packager-tips">
+                            <p class="tip">💡 ヒント: レシピブックは <code>/space getrecipebook</code> で入手できます</p>
                         </div>
                     </div>
 
                     <div class="machine-card">
                         <img src="images/compressor_interface.png" alt="空気圧縮機操作画面" class="machine-image">
-                        <h3>空気圧縮機</h3>
+                        <h3>空気圧縮機（コンプレッサー）</h3>
                         <div class="machine-info">
                             <p><strong>用途:</strong> 空気キャニスターの充填</p>
                             <p><strong>構造:</strong> 4層構造</p>
-                            <p><strong>必須:</strong> 白樺の看板</p>
+                            <p><strong>必須:</strong> 白樺の看板<br>1行目: [space]<br>2行目: compressor</p>
+                        </div>
+                        <div class="machine-recipes">
+                            <h4>重要な注意事項:</h4>
+                            <ul style="font-size: 0.9em;">
+                                <li>🚨 空のキャニスターを<strong>1スロットに1個ずつ</strong>配置</li>
+                                <li>複数個スタックすると動作しません</li>
+                                <li>宇宙空間での生存に必須のアイテム</li>
+                            </ul>
                         </div>
                         <div class="machine-usage">
                             <h4>使い方:</h4>
                             <ol>
+                                <li>構造を建築して看板を設置</li>
                                 <li>空のキャニスターをチェストに入れる</li>
-                                <li>1スロット1個ずつ配置</li>
-                                <li>看板をクリック</li>
-                                <li>「Compressing...」を確認</li>
+                                <li><strong>重要: 1スロット1個ずつ配置</strong></li>
+                                <li>看板をクリックして圧縮開始</li>
+                                <li>「Compressing...」表示を確認</li>
+                                <li>充填済みキャニスターを取り出す</li>
                             </ol>
+                        </div>
+                        <div class="packager-tips">
+                            <p class="tip">💡 ヒント: 充填済みキャニスターは予備を多めに持っていきましょう</p>
                         </div>
                     </div>
 
                     <div class="machine-card">
                         <img src="images/refinery_interface.png" alt="精製機操作画面" class="machine-image">
-                        <h3>精製機</h3>
+                        <h3>精製機（リファイナリー）</h3>
                         <div class="machine-info">
-                            <p><strong>用途:</strong> 燃料キャニスター作成</p>
+                            <p><strong>用途:</strong> ロケット燃料の精製</p>
                             <p><strong>構造:</strong> 9層構造</p>
-                            <p><strong>材料:</strong> コーラスフルーツ</p>
+                            <p><strong>必須:</strong> 白樺の看板<br>1行目: [space]<br>2行目: refinery</p>
+                        </div>
+                        <div class="machine-recipes">
+                            <h4>燃料精製レシピ:</h4>
+                            <ul style="font-size: 0.9em;">
+                                <li>コーラスフルーツ → 燃料キャニスター</li>
+                                <li>コーラスフルーツはエンドで入手</li>
+                                <li>ロケット発射に必須のアイテム</li>
+                            </ul>
                         </div>
                         <div class="machine-usage">
                             <h4>使い方:</h4>
                             <ol>
+                                <li>構造を建築して看板を設置</li>
                                 <li>コーラスフルーツをチェストに入れる</li>
-                                <li>看板をクリック</li>
-                                <li>精製完了を待つ</li>
+                                <li>看板をクリックして精製開始</li>
+                                <li>「Refining...」表示を確認</li>
+                                <li>精製完了を待つ（約数秒）</li>
                                 <li>燃料キャニスターを取り出す</li>
                             </ol>
                         </div>
+                        <div class="packager-tips">
+                            <p class="tip">💡 ヒント: ロケット発射には最低3個の燃料が必要です</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 惑星環境要件 -->
+        <section class="section bg-warning">
+            <div class="container">
+                <h2>⚠️ 惑星の環境要件</h2>
+                <div class="planet-requirements">
+                    <h3>各惑星の危険レベル</h3>
+                    <table class="requirements-table">
+                        <thead>
+                            <tr>
+                                <th>惑星</th>
+                                <th>空気</th>
+                                <th>放射線</th>
+                                <th>温度</th>
+                                <th>重力</th>
+                                <th>隕石</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>World（地球）</td>
+                                <td>✅ あり</td>
+                                <td>✅ Lv0</td>
+                                <td>✅ Lv0</td>
+                                <td>通常</td>
+                                <td>なし</td>
+                            </tr>
+                            <tr>
+                                <td>Space（宇宙空間）</td>
+                                <td>🚫 なし</td>
+                                <td>✅ Lv0</td>
+                                <td>✅ Lv0</td>
+                                <td>低重力</td>
+                                <td>なし</td>
+                            </tr>
+                            <tr class="recommended-first">
+                                <td>🔴 Mars（火星）<span class="badge-new">初心者向け</span></td>
+                                <td>🚫 なし</td>
+                                <td>⚠️ Lv1</td>
+                                <td>⚠️ Lv1</td>
+                                <td>低重力</td>
+                                <td>あり</td>
+                            </tr>
+                            <tr class="danger-high">
+                                <td>🌙 Moon（月）<span class="badge-intermediate">中級者向け</span></td>
+                                <td>🚫 なし</td>
+                                <td>🔴 Lv3</td>
+                                <td>⚠️ Lv2</td>
+                                <td>低重力</td>
+                                <td>あり</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <h3>必要な装備レベル</h3>
+                    <div class="equipment-requirements">
+                        <div class="requirement-card recommended">
+                            <h4>🔴 火星（Mars）での生存 - 初心者向け</h4>
+                            <ul>
+                                <li>ヘルメット: 最低 Lv1（空気供給）</li>
+                                <li>ベスト: Lv1以上推奨（放射線防護）</li>
+                                <li>パンツ: Lv1以上推奨（温度耐性）</li>
+                                <li>ブーツ: 基本装備でOK（ジェットパック）</li>
+                            </ul>
+                            <p class="info-message">✅ 最初の宇宙探索に最適！基本的な宇宙服で安全に探索できます。</p>
+                        </div>
+                        
+                        <div class="requirement-card">
+                            <h4>🌙 月（Moon）での生存 - 中級者向け</h4>
+                            <ul>
+                                <li>ヘルメット: 最低 Lv1（空気供給）</li>
+                                <li class="critical">ベスト: <strong>必須 Lv3（放射線防護）</strong></li>
+                                <li>パンツ: Lv2以上推奨（温度耐性）</li>
+                                <li>ブーツ: Lv1以上推奨（ジェットパック）</li>
+                            </ul>
+                            <p class="warning-message">⚠️ 放射線が強いため、しっかりとした装備が必要です。</p>
+                        </div>
+                            <ul>
+                                <li>ヘルメット: 最低 Lv1（空気供給）</li>
+                                <li class="critical">ベスト: <strong>必須 Lv4（放射線防護）</strong></li>
+                                <li class="critical">パンツ: <strong>必須 Lv4（温度耐性）</strong></li>
+                                <li>ブーツ: Lv2以上推奨（ジェットパック）</li>
+                            </ul>
+                            <p class="warning-message">⚠️ 最も危険な惑星です。完全な装備なしでの探索は推奨しません</p>
+                        </div>
+                    </div>
+                    
+                    <div class="upgrade-tip">
+                        <h3>💡 アップグレードのヒント</h3>
+                        <p>宇宙服のアップグレードは金床で行います：</p>
+                        <ol>
+                            <li>金床にShift+左クリックでGUIを開く</li>
+                            <li>左スロットに宇宙服を置く</li>
+                            <li>右スロットにアップグレードキットを置く</li>
+                            <li>結果スロットからアップグレード済み装備を取る</li>
+                        </ol>
+                        <p>※ Tier 1→Tier 2→Tier 3→Tier 4 の順番でアップグレードが必要です</p>
                     </div>
                 </div>
             </div>
@@ -226,7 +384,8 @@
             <div class="container">
                 <h2>👨‍🚀 宇宙服とアップグレード</h2>
                 
-                <h3>宇宙服の作成</h3>
+                <h3>宇宙服の作成（パッケージャーで作成）</h3>
+                <p class="important-note">⚠️ 重要: 火星はLv1装備でOK！月は放射線が強いためLv3以上が必要です。</p>
                 <div class="spacesuit-grid">
                     <div class="suit-part">
                         <h4>🪖 ヘルメット</h4>
@@ -380,14 +539,42 @@
                 <h2>🌍 惑星探索ガイド</h2>
                 
                 <div class="planet-grid">
-                    <div class="planet-card moderate">
-                        <img src="images/planet_moon.png" alt="月" class="planet-thumbnail">
-                        <h3>🌙 月（The Moon）</h3>
+                    <div class="planet-card recommended">
+                        <img src="images/planet_mars.png" alt="火星" class="planet-thumbnail">
+                        <h3>🔴 火星（Mars）<span class="badge-new">初心者推奨</span></h3>
                         <div class="planet-stats">
                             <p>📊 危険度: ★★☆☆☆</p>
                             <p>🌬️ 酸素: なし</p>
-                            <p>🪐 重力: 地球の1/6</p>
-                            <p>🌡️ 温度: 極端な寒暖差</p>
+                            <p>🪐 重力: 低重力</p>
+                            <p>☢️ 放射線: Lv1（低い）</p>
+                        </div>
+                        <div class="planet-resources">
+                            <h4>主な資源:</h4>
+                            <ul>
+                                <li>鉄鉱石（豊富）</li>
+                                <li>地下氷</li>
+                                <li>火星の土</li>
+                            </ul>
+                        </div>
+                        <div class="planet-tips">
+                            <h4>必要装備:</h4>
+                            <ul>
+                                <li class="success-text">基本宇宙服でOK！</li>
+                                <li>酸素キャニスター×3</li>
+                                <li>放射線防護 Lv1</li>
+                            </ul>
+                        </div>
+                        <a href="planets.html#mars" class="planet-detail-link">詳細を見る →</a>
+                    </div>
+
+                    <div class="planet-card dangerous">
+                        <img src="images/planet_moon.png" alt="月" class="planet-thumbnail">
+                        <h3>🌙 月（The Moon）</h3>
+                        <div class="planet-stats">
+                            <p>📊 危険度: ★★★★☆</p>
+                            <p>🌬️ 酸素: なし</p>
+                            <p>🪐 重力: 低重力</p>
+                            <p>☢️ 放射線: Lv3（高い）</p>
                         </div>
                         <div class="planet-resources">
                             <h4>主な資源:</h4>
@@ -400,41 +587,12 @@
                         <div class="planet-tips">
                             <h4>必要装備:</h4>
                             <ul>
-                                <li>宇宙服（最低Tier 1）</li>
-                                <li>酸素キャニスター×3以上</li>
-                                <li>温度耐性 Tier 1推奨</li>
+                                <li class="warning-text">放射線防護 Lv3必須！</li>
+                                <li>酸素キャニスター×5以上</li>
+                                <li>温度耐性 Lv2推奨</li>
                             </ul>
                         </div>
                         <a href="planets.html#moon" class="planet-detail-link">詳細を見る →</a>
-                    </div>
-
-                    <div class="planet-card dangerous">
-                        <img src="images/planet_mars.png" alt="火星" class="planet-thumbnail">
-                        <h3>🔴 火星（Mars）</h3>
-                        <div class="planet-stats">
-                            <p>📊 危険度: ★★★☆☆</p>
-                            <p>🌬️ 酸素: なし（薄いCO2）</p>
-                            <p>🪐 重力: 地球の38%</p>
-                            <p>🌪️ 砂嵐: 定期的に発生</p>
-                        </div>
-                        <div class="planet-resources">
-                            <h4>主な資源:</h4>
-                            <ul>
-                                <li>豊富な鉄鉱石</li>
-                                <li>地下氷（水源）</li>
-                                <li>過塩素酸塩（燃料）</li>
-                            </ul>
-                        </div>
-                        <div class="planet-tips">
-                            <h4>必要装備:</h4>
-                            <ul>
-                                <li>宇宙服（Tier 2以上）</li>
-                                <li>酸素キャニスター×5以上</li>
-                                <li>温度耐性 Tier 2必須</li>
-                                <li>放射線防護 Tier 1+</li>
-                            </ul>
-                        </div>
-                        <a href="planets.html#mars" class="planet-detail-link">詳細を見る →</a>
                     </div>
 
                 </div>
