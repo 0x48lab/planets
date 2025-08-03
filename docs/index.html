@@ -267,13 +267,50 @@
                                 <li>石ボタン × 1（内部用）</li>
                             </ul>
                             
-                            <h4>推奨材料（ポイント）</h4>
-                            <ul>
-                                <li>クォーツブロック: 34pt</li>
-                                <li>ダイヤブロック: 20pt</li>
-                                <li>ガラス各種: 20pt</li>
-                                <li>鉄ブロック: 10pt</li>
-                            </ul>
+                            <h4>使用可能な材料（ポイント表）</h4>
+                            <div class="materials-grid">
+                                <div class="material-category">
+                                    <h5>高級素材（30pt以上）</h5>
+                                    <ul>
+                                        <li>クォーツブロック: 34pt</li>
+                                        <li>クォーツの階段: 30pt</li>
+                                        <li>模様入りクォーツ: 40pt</li>
+                                        <li>クォーツレンガ: 50pt</li>
+                                        <li>クォーツの柱: 40pt</li>
+                                        <li>滑らかなクォーツ階段: 30pt</li>
+                                        <li>石: 100pt（特殊）</li>
+                                    </ul>
+                                </div>
+                                <div class="material-category">
+                                    <h5>中級素材（20-29pt）</h5>
+                                    <ul>
+                                        <li>ダイヤモンドブロック: 20pt</li>
+                                        <li>レッドストーンブロック: 20pt</li>
+                                        <li>プルプァブロック: 25pt</li>
+                                        <li>プルプァの柱: 25pt</li>
+                                        <li>プルプァ階段: 20pt</li>
+                                        <li>すべてのガラス: 20pt</li>
+                                        <li>色付きガラス各種: 20pt</li>
+                                    </ul>
+                                </div>
+                                <div class="material-category">
+                                    <h5>基本素材（10-19pt）</h5>
+                                    <ul>
+                                        <li>鉄ブロック: 10pt</li>
+                                        <li>金ブロック: 15pt</li>
+                                        <li>エンドロッド: 15pt</li>
+                                    </ul>
+                                </div>
+                                <div class="material-category">
+                                    <h5>使用不可の材料</h5>
+                                    <ul style="color: #d9534f;">
+                                        <li>足場</li>
+                                        <li>雪・雪ブロック</li>
+                                        <li>松明（全種類）</li>
+                                        <li>木材（全種類）</li>
+                                    </ul>
+                                </div>
+                            </div>
                             
                             <h4>燃料計算</h4>
                             <p>必要燃料 = 基本 + (スコア÷100)</p>
@@ -318,73 +355,63 @@
                 <h2>🌍 惑星探索ガイド</h2>
                 
                 <div class="planet-grid">
-                    <div class="planet-card safe">
-                        <h3>🌿 有機惑星</h3>
-                        <div class="planet-stats">
-                            <p>📊 危険度: ★☆☆☆☆</p>
-                            <p>🌬️ 酸素: あり</p>
-                            <p>☢️ 放射線: Lv.1</p>
-                            <p>🌡️ 温度: Lv.2</p>
-                        </div>
-                        <div class="planet-tips">
-                            <h4>必要装備:</h4>
-                            <ul>
-                                <li>宇宙服不要</li>
-                                <li>温度耐性 Tier 2推奨</li>
-                            </ul>
-                        </div>
-                    </div>
-
                     <div class="planet-card moderate">
-                        <h3>🌊 水中惑星</h3>
+                        <img src="images/planet_moon.png" alt="月" class="planet-thumbnail">
+                        <h3>🌙 月（The Moon）</h3>
                         <div class="planet-stats">
                             <p>📊 危険度: ★★☆☆☆</p>
-                            <p>🌬️ 酸素: あり（陸上）</p>
-                            <p>☢️ 放射線: なし</p>
-                            <p>🌡️ 温度: Lv.1</p>
+                            <p>🌬️ 酸素: なし</p>
+                            <p>🪐 重力: 地球の1/6</p>
+                            <p>🌡️ 温度: 極端な寒暖差</p>
+                        </div>
+                        <div class="planet-resources">
+                            <h4>主な資源:</h4>
+                            <ul>
+                                <li>月の石・月の土</li>
+                                <li>ヘリウム3（レア）</li>
+                                <li>チタン鉱石（高確率）</li>
+                            </ul>
                         </div>
                         <div class="planet-tips">
                             <h4>必要装備:</h4>
                             <ul>
-                                <li>水中呼吸ポーション</li>
-                                <li>温度耐性 Tier 1</li>
+                                <li>宇宙服（最低Tier 1）</li>
+                                <li>酸素キャニスター×3以上</li>
+                                <li>温度耐性 Tier 1推奨</li>
                             </ul>
                         </div>
+                        <a href="planets.html#moon" class="planet-detail-link">詳細を見る →</a>
                     </div>
 
                     <div class="planet-card dangerous">
-                        <h3>🪨 岩石惑星</h3>
+                        <img src="images/planet_mars.png" alt="火星" class="planet-thumbnail">
+                        <h3>🔴 火星（Mars）</h3>
                         <div class="planet-stats">
-                            <p>📊 危険度: ★★★★☆</p>
-                            <p>🌬️ 酸素: なし</p>
-                            <p>☢️ 放射線: Lv.3</p>
-                            <p>☄️ 隕石: あり</p>
+                            <p>📊 危険度: ★★★☆☆</p>
+                            <p>🌬️ 酸素: なし（薄いCO2）</p>
+                            <p>🪐 重力: 地球の38%</p>
+                            <p>🌪️ 砂嵐: 定期的に発生</p>
+                        </div>
+                        <div class="planet-resources">
+                            <h4>主な資源:</h4>
+                            <ul>
+                                <li>豊富な鉄鉱石</li>
+                                <li>地下氷（水源）</li>
+                                <li>過塩素酸塩（燃料）</li>
+                            </ul>
                         </div>
                         <div class="planet-tips">
                             <h4>必要装備:</h4>
                             <ul>
-                                <li>宇宙服フルセット</li>
-                                <li>放射線防護 Tier 3+</li>
+                                <li>宇宙服（Tier 2以上）</li>
+                                <li>酸素キャニスター×5以上</li>
+                                <li>温度耐性 Tier 2必須</li>
+                                <li>放射線防護 Tier 1+</li>
                             </ul>
                         </div>
+                        <a href="planets.html#mars" class="planet-detail-link">詳細を見る →</a>
                     </div>
 
-                    <div class="planet-card extreme">
-                        <h3>☢️ 放射線惑星</h3>
-                        <div class="planet-stats">
-                            <p>📊 危険度: ★★★★★</p>
-                            <p>🌬️ 酸素: なし</p>
-                            <p>☢️ 放射線: Lv.4</p>
-                            <p>🌡️ 温度: Lv.4</p>
-                        </div>
-                        <div class="planet-tips">
-                            <h4>必要装備:</h4>
-                            <ul>
-                                <li>宇宙服フルセット</li>
-                                <li>全Tier 4アップグレード</li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="survival-tips">
