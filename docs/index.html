@@ -256,15 +256,27 @@
                 
                 <div class="rocket-guide">
                     <div class="rocket-build">
-                        <h3>ロケット建造</h3>
+                        <h3>ロケット建造仕様</h3>
                         <div class="build-requirements">
-                            <h4>建造ルール</h4>
+                            <h4>基本要件</h4>
                             <ul>
                                 <li>最大高さ: 15ブロック</li>
-                                <li>発射台の範囲内</li>
-                                <li>チェスト必須（燃料用）</li>
-                                <li>オークの看板必須</li>
+                                <li>スコア範囲: 100-1000ポイント</li>
+                                <li>チェスト × 1（燃料用）</li>
+                                <li>オークの看板 × 1</li>
+                                <li>石ボタン × 1（内部用）</li>
                             </ul>
+                            
+                            <h4>推奨材料（ポイント）</h4>
+                            <ul>
+                                <li>クォーツブロック: 34pt</li>
+                                <li>ダイヤブロック: 20pt</li>
+                                <li>ガラス各種: 20pt</li>
+                                <li>鉄ブロック: 10pt</li>
+                            </ul>
+                            
+                            <h4>燃料計算</h4>
+                            <p>必要燃料 = 基本 + (スコア÷100)</p>
                         </div>
                     </div>
 
@@ -395,6 +407,104 @@
                             <h4>緊急脱出</h4>
                             <p>ロケット位置を常に把握。座標をメモして迷子防止。</p>
                         </div>
+                    </div>
+                </div>
+                
+                <h3>🏠 惑星基地の建築技術</h3>
+                <div class="construction-guide">
+                    <div class="construction-card">
+                        <h4>エアロック（二重扉）</h4>
+                        <div class="airlock-diagram">
+                            <pre>
+[外側]━[扉1]━[緩衝室]━[扉2]━[内側]
+         3×3×3空間</pre>
+                        </div>
+                        <p><strong>必要材料:</strong></p>
+                        <ul>
+                            <li>鉄のドア × 2</li>
+                            <li>レッドストーン回路</li>
+                            <li>石のボタン × 2</li>
+                        </ul>
+                        <p class="construction-tip">片方が開くと、もう片方がロックされる仕組みで気密性を保持</p>
+                    </div>
+                    
+                    <div class="construction-card">
+                        <h4>密閉型居住区</h4>
+                        <p><strong>基本設計:</strong></p>
+                        <ul>
+                            <li>最小サイズ: 7×7×4（内寸）</li>
+                            <li>壁の厚さ: 2ブロック以上</li>
+                            <li>材料: 石系ブロック推奨</li>
+                        </ul>
+                        <p><strong>必須設備:</strong></p>
+                        <ul>
+                            <li>エアロック入口</li>
+                            <li>酸素供給ポイント</li>
+                            <li>緊急脱出口</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="construction-card">
+                        <h4>地下農場</h4>
+                        <div class="farm-diagram">
+                            <pre>
+[土][土][土][土][土]
+[水][土][水][土][水]
+[石][石][石][石][石]</pre>
+                        </div>
+                        <p><strong>ポイント:</strong></p>
+                        <ul>
+                            <li>光源: グロウストーン推奨</li>
+                            <li>水源: 1ブロックおきに配置</li>
+                            <li>作物: 小麦、じゃがいも、にんじん</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="construction-card">
+                        <h4>隕石シェルター</h4>
+                        <p><strong>構造:</strong></p>
+                        <ul>
+                            <li>深さ: 10ブロック以上</li>
+                            <li>天井: 石3層以上</li>
+                            <li>警報: 音符ブロック設置</li>
+                        </ul>
+                        <p class="construction-tip">地表での活動は最小限に。主要施設は全て地下に建設</p>
+                    </div>
+                </div>
+                
+                <h3>📋 生存優先順位</h3>
+                <div class="priority-timeline">
+                    <div class="timeline-item">
+                        <h4>着陸直後（10分以内）</h4>
+                        <ol>
+                            <li>地下へ避難（隕石回避）</li>
+                            <li>5×5×3の仮拠点作成</li>
+                            <li>松明設置（MOB対策）</li>
+                        </ol>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>第1日目</h4>
+                        <ol>
+                            <li>エアロック建設</li>
+                            <li>基本設備設置</li>
+                            <li>酸素確保</li>
+                        </ol>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>第2-3日目</h4>
+                        <ol>
+                            <li>水源確保（氷を溶かす）</li>
+                            <li>農場建設開始</li>
+                            <li>居住区拡張</li>
+                        </ol>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>第4日目以降</h4>
+                        <ol>
+                            <li>自動化システム</li>
+                            <li>防御強化</li>
+                            <li>第2基地建設</li>
+                        </ol>
                     </div>
                 </div>
             </div>
